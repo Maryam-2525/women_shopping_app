@@ -12,6 +12,8 @@ class Product {
   });
 
   factory Product.fromJson(Map<String, dynamic> json) {
+    const String baseUrl = 'https://api.timbu.cloud/images/';
+
     double? extractPrice(Map<String, dynamic> json) {
       if (json['current_price'] != null && json['current_price'].isNotEmpty) {
         var prices = json['current_price'][0];
@@ -22,12 +24,18 @@ class Product {
       return null;
     }
 
+    // Extract the first image URL from photos list if available
+    String? extractImageUrl(Map<String, dynamic> json) {
+      if (json['photos'] != null && json['photos'].isNotEmpty) {
+        return baseUrl + json['photos'][0]['url'];
+      }
+      return null;
+    }
+
     return Product(
       name: json['name'],
       // description: json['description'],
-      imageUrl: json['product_image'].isNotEmpty
-          ? json['product_image'][0]['url']
-          : null,
+      imageUrl: extractImageUrl(json),
       price: extractPrice(json),
     );
   }

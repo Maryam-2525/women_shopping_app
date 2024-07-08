@@ -1,7 +1,4 @@
-// product_list_screen.dart
-
 import 'package:flutter/material.dart';
-import 'package:women_shopping_app/screens/checkout.dart';
 import '../services/api_service.dart';
 import '../models/product_model.dart';
 
@@ -21,12 +18,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
       return (data['items'] as List)
           .map((productJson) => Product.fromJson(productJson))
           .toList();
-    });
-  }
-
-  void onPressed() {
-    setState(() {
-      const CheckoutScreen();
     });
   }
 
@@ -51,9 +42,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
             itemBuilder: (context, index) {
               final product = snapshot.data![index];
               return Card(
-                elevation: 5,
+                elevation: 4,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8),
                   child: ListTile(
                       leading: product.imageUrl != null
                           ? Image.network(product.imageUrl!,
@@ -66,7 +57,13 @@ class _ProductListScreenState extends State<ProductListScreen> {
                           : null,
                       // const Text('this is description'),
                       trailing: TextButton.icon(
-                          onPressed: onPressed,
+                          onPressed: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) =>
+                            //             const CheckoutScreen()));
+                          },
                           style: TextButton.styleFrom(
                               foregroundColor: Colors.white,
                               backgroundColor:

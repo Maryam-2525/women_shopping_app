@@ -1,16 +1,12 @@
 # women_shopping_app
 
-A new Flutter project.
+A women shopping app that display a list of product with images using timbu api
 
-## Getting Started
+## features
 
-This project is a starting point for a Flutter application.
+Displays products in a list with images product name and images
 
-A few resources to get you started if this is your first Flutter project:
+## visual showcase of the app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A virtual representation of the app with appetize.io
+[link]

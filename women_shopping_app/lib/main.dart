@@ -5,10 +5,11 @@ import 'package:women_shopping_app/screens/checkout.dart';
 import 'screens/product_list_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +42,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SHOPPING APP'),
+        title: const Text('Women Shopping App'),
         backgroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
         foregroundColor: Colors.white,
       ),
@@ -52,10 +53,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_basket_sharp), label: 'PRODUCTS'),
+              icon: Icon(Icons.shopping_basket_sharp), label: 'Products'),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart_checkout_rounded),
-              label: 'CHECKOUT'),
+              label: 'Checkout'),
         ],
         currentIndex: _currentIndex,
         onTap: onTap,
