@@ -4,9 +4,10 @@ A women shopping app that display a list of product with images using timbu api.
 
 ## features
 
-Displays products in a list with images, product name, and prices.
+- Displays products in a list with images, product name, and prices.
+- A checkout screen
 
 ## visual showcase of the app
 
 A virtual representation of the app with appetize.io
-[link] https://appetize.io/app/android/com.example.women_shopping_app?device=pixel7&osVersion=13.0
+[link] https://appetize.io/app/b_bcjic5javscn6dyvywscra34cm
